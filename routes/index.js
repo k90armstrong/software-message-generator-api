@@ -14,6 +14,25 @@ router.get('/', function (req, res, next) {
 });
 
 
+router.get('/api/:type/random/theme/:theme/apikey/:apiKey', function (req, res, next) {
+  // with this route, we will be getting a random loading message based on a theme
+  // check if the request has a valid apikey
+  // if the request is not valid send a 404 and a message that they don't have permission
+  // if they do have a valid key then find a random message
+  let query = {
+    type: req.params.type,
+    theme: req.params.theme
+  };
+  // change this to actually pull a random one...
+  db.get().collection('messages').findOne(query, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+    // if there is no result, there should be a default message...
+    res.status(200).send(result);
+  });
+});
+
+
 // Below are just examples
 
 // router.post('/api/update/edit', function(req, res, next) {
