@@ -1,11 +1,13 @@
 [{
         "message": "This is the first message and is a template for the loading",
+        "quoteAuthor": "person who is being quoted in message, can be null",
         "type": "loading",
         "gif_url": "url_for_the_loading_gif",
         "theme": ["array", "of", "themes"]
     },
     {
         "message": "This is the first message and is a template for a confirm",
+        "quoteAuthor": "person who is being quoted in message, can be null",
         "type": "confirmation",
         "confirmText": "Text used on a button tp proceed",
         "cancelText": "Text used on a button to cancel action",
@@ -13,11 +15,13 @@
     },
     {
         "message": "This is the first message and is a template for a server failure",
+        "quoteAuthor": "person who is being quoted in message, can be null",
         "type": "serverFailure",
         "theme": ["array", "of", "themes"]
     },
     {
         "message": "This is the first message and is a template for a successful server action",
+        "quoteAuthor": "person who is being quoted in message, can be null",
         "type": "serverActionSuccess",
         "theme": ["array", "of", "themes"]
     }
