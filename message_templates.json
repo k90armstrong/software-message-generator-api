@@ -1,0 +1,19 @@
+[{
+    "message": "This is the first message and is a template for the loading",
+    "type": "loading",
+    "gif_url": "url_for_the_loading_gif"
+},
+{
+    "message": "This is the first message and is a template for a confirm",
+    "type": "confirmation",
+    "confirmText": "Text used in a button"
+},
+{
+    "message": "This is the first message and is a template for a server failure",
+    "type": "serverFailure"
+},
+{
+    "message": "This is the first message and is a template for a successful server action",
+    "type": "serverActionSuccess"
+}
+]
