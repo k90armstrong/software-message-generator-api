@@ -1,19 +1,23 @@
 [{
     "message": "This is the first message and is a template for the loading",
     "type": "loading",
-    "gif_url": "url_for_the_loading_gif"
+    "gif_url": "url_for_the_loading_gif",
+    "theme": ["array", "of", "themes"]
 },
 {
     "message": "This is the first message and is a template for a confirm",
     "type": "confirmation",
-    "confirmText": "Text used in a button"
+    "confirmText": "Text used in a button",
+    "theme": ["array", "of", "themes"]
 },
 {
     "message": "This is the first message and is a template for a server failure",
-    "type": "serverFailure"
+    "type": "serverFailure",
+    "theme": ["array", "of", "themes"]
 },
 {
     "message": "This is the first message and is a template for a successful server action",
-    "type": "serverActionSuccess"
+    "type": "serverActionSuccess",
+    "theme": ["array", "of", "themes"]
 }
 ]
