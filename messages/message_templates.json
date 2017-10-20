@@ -1,3 +1,5 @@
+// use this to import the messages.json into a mongo database called messages 
+// mongoimport --jsonArray --db messages --collection messages --file messages/messages.json
 [{
         "message": "This is the first message and is a template for the loading",
         "quoteAuthor": "person who is being quoted in message, can be null",
