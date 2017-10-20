@@ -9,9 +9,7 @@ var MessageRequest = require('../models/messageRequest')
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', {
-    title: 'Express'
-  });
+  res.send('Welcome to the message api');
 });
 
 
@@ -28,7 +26,7 @@ router.get('/api/:type/random/theme/:theme/apikey/:apiKey', function (req, res, 
     if (result) {
       let theme = req.params.theme;
       let type = req.params.type;
-      var messageRequest = new MessageRequest(theme, type); 
+      var messageRequest = new MessageRequest(theme, type);
       messageRequest.getRandom(function (err, result) {
         res.status(200).send(result);
       });
@@ -51,7 +49,7 @@ router.get('/api/newKey/email/:email', function (req, res, next) {
     // change this to actually pull a random one...
 
     if (result) {
-        res.status(200).send(result);
+      res.status(200).send(result);
     } else {
       // send an error message
       res.status(403).send('Failed to create new API key');
