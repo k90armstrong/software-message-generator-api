@@ -15,10 +15,11 @@ router.get('/', function (req, res, next) {
 
 router.get('/api/:type/random/theme/:theme/apikey/:apiKey', function (req, res, next) {
   // with this route, we will be getting a random loading message based on a theme
-  let query = {
-    type: req.params.type,
-    theme: req.params.theme
-  };
+  let query = [
+    {$sample: { size: 1 }},
+    {$match:{"type":req.params.type}},
+    {$match:{"theme":req.params.theme}}
+  ];
   db.get().collection('api_keys').findOne({
     "key": req.params.apiKey
   }, function (err, result) {
@@ -28,7 +29,7 @@ router.get('/api/:type/random/theme/:theme/apikey/:apiKey', function (req, res, 
     // if they do have a valid key then find a random message
     // change this to actually pull a random one...
     if (result) {
-      db.get().collection('messages').findOne(query, function (err, result) {
+      db.get().collection('messages').aggregate(query, function (err, result) {
         if (err) throw err;
         console.log(result);
         // if there is no result, there should be a default message...
