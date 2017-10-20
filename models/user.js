@@ -11,3 +11,5 @@ var User = function (email, apiKey) {
         }
     }
 }
+
+module.exports = User;
