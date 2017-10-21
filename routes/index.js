@@ -24,7 +24,7 @@ router.get('/api/random', function (req, res, next) {
     if (result) {
       // check if user has met their quota
       user.getUserCallsToday(function (calls, callsErr) {
-        if (calls < 100) {
+        if (calls < 100) { // TODO set this limit to some variable not hardcoded
           let theme = req.query.theme;
           let type = req.query.type;
           var messageRequest = new MessageRequest(theme, type);
@@ -49,6 +49,7 @@ router.get('/api/random', function (req, res, next) {
 });
 
 router.get('/api/newKey', function (req, res, next) {
+  // TODO figure out how to not allow anyone to use this API
   // with this route, we will be getting a random loading message based on a theme
   // url should be like the following /api/newKey?email=someemail@email.com
   var user = new User(req.query.email, null);
@@ -63,7 +64,9 @@ router.get('/api/newKey', function (req, res, next) {
       res.status(200).send(result);
     } else {
       // send an error message
-      res.status(403).send('Failed to create new API key');
+      res.status(403).send({
+        message: 'Failed to create new API key'
+      });
     }
   });
 });
