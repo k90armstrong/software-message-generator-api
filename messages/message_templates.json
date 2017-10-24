@@ -8,7 +8,8 @@
         "theme": ["array", "of", "themes"]
     },
     {
-        "message": "This is the first message and is a template for a confirm",
+        "message": "Don't 'Schrute' it, are you sure you want to do this?",
+        "messageIncomplete": "Don't 'Schrute' it, are you sure you want to", // leave it to the one using the api to finish the sentence, make all confirmations like this so that they can be filled in the same way
         "quoteAuthor": "person who is being quoted in message, can be null",
         "type": "confirmation",
         "confirmText": "Text used on a button tp proceed",

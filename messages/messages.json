@@ -1,9 +1,34 @@
 [{
-    "message": "I love my employees even though I hit one of you with my car",
-    "quoteAuthor": "Michael Scott",
-    "type": "loading",
-    "gif_url": "url_for_the_loading_gif",
-    "theme": [
-        "funny", "the office", "michael scott"
-    ]
-}]
+        "message": "I love my employees even though I hit one of you with my car",
+        "quoteAuthor": "Michael Scott",
+        "type": "loading",
+        "gif_url": "url_for_the_loading_gif",
+        "theme": [
+            "funny", "the office", "michael scott"
+        ]
+    },
+    {
+        "message": "Don't 'Schrute' it, are you sure you want to do this?",
+        "messageIncomplete": "Don't 'Schrute' it, are you sure you want to",
+        "quoteAuthor": "Andy Bernard",
+        "type": "confirmation",
+        "confirmText": "Yes",
+        "cancelText": "No",
+        "gif_url": "url_for_the_loading_gif",
+        "theme": [
+            "funny",
+            "the office",
+            "andy bernard"
+        ]
+    },
+    {
+        "message": "The server just Shruted it!",
+        "quoteAuthor": "Andy Bernard",
+        "type": "serverFailure",
+        "theme": [
+            "the office",
+            "funny",
+            "andy bernard"
+        ]
+    }
+]
